@@ -7,11 +7,12 @@ const cron = require("node-cron")
 const User = require("../models/Users")
 const twilio = require('twilio');
 const { Op } = require('sequelize');
+require("dotenv").config();
 const VoiceResponse = require("twilio/lib/twiml/VoiceResponse")
 
 // Twilio credentials
-const accountSid = 'AC918fef57c474bed299f9ce525e92b591';
-const authToken = '1137e14b83b568fcbb72cd061e72df71';
+const accountSid = process.env.accountSid;
+const authToken = process.env.authToken;
 const twilioClient = new twilio(accountSid, authToken);
 let callStatuses = {};
 

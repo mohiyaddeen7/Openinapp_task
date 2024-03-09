@@ -7,7 +7,7 @@ const Sequelize = require("sequelize");
  * Create a Sequelize instance. This can be done by passing
  * the connection parameters separately to the Sequelize constructor.
  */
-const sequelize = new Sequelize("openinappdb", "root", "1606", {
+const sequelize = new Sequelize("db_name", "root", "password", {
     host: "localhost",
     dialect: "mysql",
 });

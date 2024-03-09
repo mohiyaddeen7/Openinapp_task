@@ -1,0 +1,352 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "OpeninApp",
+    "dateExported": "2024-03-09T04:18:27.611Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "60b3afd9-99c4-4641-82e6-b3da4bbe9dd4",
+            "name": "tasks",
+            "containerId": "",
+            "created": "2024-03-07T11:01:12.856Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "12726e6c-f3d6-40e6-807c-1a494e6dac51",
+            "name": "subtask",
+            "containerId": "",
+            "created": "2024-03-09T04:17:47.606Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "2345a4e7-f67c-44b8-a920-4740c10dfd06",
+            "name": "users",
+            "containerId": "",
+            "created": "2024-03-09T04:18:14.895Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "e8106899-4a88-42d9-a34b-73f35c8e6990",
+            "colId": "7240b88e-0b84-4657-9f85-f7a8cbcba77a",
+            "containerId": "60b3afd9-99c4-4641-82e6-b3da4bbe9dd4",
+            "name": "Create a task",
+            "url": "http://localhost:5000/api/tasks/addtask",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-07T11:01:19.625Z",
+            "modified": "2024-03-09T03:13:53.721Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoxfQ.B4NJhvCaLh3vcR5_kSJUW00EC2E0CM8SeTEJs7Hnycc"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\":\"F\",\n  \"description\":\"b\",\n  \"due_date\":\"2024-03-08\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "d8b1b5f2-1c5e-4a33-a713-abe4ce06987e",
+            "colId": "7240b88e-0b84-4657-9f85-f7a8cbcba77a",
+            "containerId": "12726e6c-f3d6-40e6-807c-1a494e6dac51",
+            "name": "Create a subtask",
+            "url": "http://localhost:5000/api/tasks/addsubtask",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-07T15:36:05.387Z",
+            "modified": "2024-03-08T13:59:21.850Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoxfQ.B4NJhvCaLh3vcR5_kSJUW00EC2E0CM8SeTEJs7Hnycc"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"task_id\":1\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "f91ff3f9-adb3-4975-bd56-8eb2e61632dc",
+            "colId": "7240b88e-0b84-4657-9f85-f7a8cbcba77a",
+            "containerId": "2345a4e7-f67c-44b8-a920-4740c10dfd06",
+            "name": "create a user",
+            "url": "http://localhost:5000/api/tasks/createuser",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-08T11:52:14.094Z",
+            "modified": "2024-03-08T16:05:36.043Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoxfQ.B4NJhvCaLh3vcR5_kSJUW00EC2E0CM8SeTEJs7Hnycc"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"phoneNumber\":\"7975441289\",\n  \"priority\":\"1\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2555b2e7-710c-4ddd-9d6f-70edfca378af",
+            "colId": "7240b88e-0b84-4657-9f85-f7a8cbcba77a",
+            "containerId": "12726e6c-f3d6-40e6-807c-1a494e6dac51",
+            "name": "Get all sub tasks with proper filters and pagination ",
+            "url": "http://localhost:5000/api/tasks/getsubtasks?task_id=2&status=0&deleted=true",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-07T17:55:09.009Z",
+            "modified": "2024-03-08T10:51:55.181Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoxfQ.B4NJhvCaLh3vcR5_kSJUW00EC2E0CM8SeTEJs7Hnycc"
+                }
+            ],
+            "params": [
+                {
+                    "name": "task_id",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "status",
+                    "value": "0",
+                    "isPath": false
+                },
+                {
+                    "name": "deleted",
+                    "value": "true",
+                    "isPath": false
+                }
+            ],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "de4181e3-e088-4e03-83c8-56b1745ffefd",
+            "colId": "7240b88e-0b84-4657-9f85-f7a8cbcba77a",
+            "containerId": "2345a4e7-f67c-44b8-a920-4740c10dfd06",
+            "name": "get all users with proper filters and pagination",
+            "url": "http://localhost:5000/api/tasks/getusers?page=1&limit=2&priority=0",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-08T12:06:54.447Z",
+            "modified": "2024-03-08T12:07:37.255Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoxfQ.B4NJhvCaLh3vcR5_kSJUW00EC2E0CM8SeTEJs7Hnycc"
+                }
+            ],
+            "params": [
+                {
+                    "name": "page",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "priority",
+                    "value": "0",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "6f17e245-9212-49b8-9253-7d58f618ea7b",
+            "colId": "7240b88e-0b84-4657-9f85-f7a8cbcba77a",
+            "containerId": "60b3afd9-99c4-4641-82e6-b3da4bbe9dd4",
+            "name": "Get all tasks with proper filters and pagination",
+            "url": "http://localhost:5000/api/tasks/gettasks?page=1&limit=2&priority=1&status=TODO&deleted=tru",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-07T15:51:56.896Z",
+            "modified": "2024-03-08T10:50:21.458Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoxfQ.B4NJhvCaLh3vcR5_kSJUW00EC2E0CM8SeTEJs7Hnycc"
+                }
+            ],
+            "params": [
+                {
+                    "name": "page",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "priority",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "status",
+                    "value": "TODO",
+                    "isPath": false
+                },
+                {
+                    "name": "deleted",
+                    "value": "tru",
+                    "isPath": false
+                }
+            ],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "781080a0-3ece-4e5f-ac76-2821906a54f9",
+            "colId": "7240b88e-0b84-4657-9f85-f7a8cbcba77a",
+            "containerId": "12726e6c-f3d6-40e6-807c-1a494e6dac51",
+            "name": "delete a subtask",
+            "url": "http://localhost:5000/api/tasks/deletesubtask/subTaskId=a",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-03-08T06:25:47.126Z",
+            "modified": "2024-03-08T11:07:43.457Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoxfQ.B4NJhvCaLh3vcR5_kSJUW00EC2E0CM8SeTEJs7Hnycc"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "107e65de-3860-4eab-91ef-beef3e7669b4",
+            "colId": "7240b88e-0b84-4657-9f85-f7a8cbcba77a",
+            "containerId": "2345a4e7-f67c-44b8-a920-4740c10dfd06",
+            "name": "update a user",
+            "url": "http://localhost:5000/api/tasks/updateuser/user_id=1",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-08T12:47:14.151Z",
+            "modified": "2024-03-08T12:48:44.718Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoxfQ.B4NJhvCaLh3vcR5_kSJUW00EC2E0CM8SeTEJs7Hnycc"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"priority\":\"1\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f6d05dc6-1f3e-4631-9195-62e3eca6f72c",
+            "colId": "7240b88e-0b84-4657-9f85-f7a8cbcba77a",
+            "containerId": "12726e6c-f3d6-40e6-807c-1a494e6dac51",
+            "name": "update subtask",
+            "url": "http://localhost:5000/api/tasks/updatesubtask/subTaskId=25",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-08T05:08:41.159Z",
+            "modified": "2024-03-08T11:14:59.103Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoxfQ.B4NJhvCaLh3vcR5_kSJUW00EC2E0CM8SeTEJs7Hnycc"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"status\":\"1\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0cf24616-3ede-4b19-bdb7-08a2cbff40fa",
+            "colId": "7240b88e-0b84-4657-9f85-f7a8cbcba77a",
+            "containerId": "60b3afd9-99c4-4641-82e6-b3da4bbe9dd4",
+            "name": "update a task",
+            "url": "http://localhost:5000/api/tasks/updatetask/taskId=2",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-03-08T03:15:20.724Z",
+            "modified": "2024-03-08T11:04:49.006Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoxfQ.B4NJhvCaLh3vcR5_kSJUW00EC2E0CM8SeTEJs7Hnycc"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"due_date\": \"2024-03-08\",\n  \"status\":\"TODO\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7aa47054-d958-41de-b740-06cf60ae73a4",
+            "colId": "7240b88e-0b84-4657-9f85-f7a8cbcba77a",
+            "containerId": "60b3afd9-99c4-4641-82e6-b3da4bbe9dd4",
+            "name": "delete a task",
+            "url": "http://localhost:5000/api/tasks/deletetask/taskId=1",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-03-08T05:59:24.776Z",
+            "modified": "2024-03-08T07:45:21.629Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoxfQ.B4NJhvCaLh3vcR5_kSJUW00EC2E0CM8SeTEJs7Hnycc"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

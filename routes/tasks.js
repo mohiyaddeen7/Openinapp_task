@@ -13,6 +13,7 @@ const VoiceResponse = require("twilio/lib/twiml/VoiceResponse")
 // Twilio credentials
 const accountSid = "YOUR_TWILIO_ACCOUNT_SID";
 const authToken = "YOUR_TWILIO_AUTH_TOKEN";
+const ngrokPublicUrl = "NGROK_PUBLIC_URL"
 const twilioClient = new twilio(accountSid, authToken);
 let callStatuses = {};
 
@@ -26,7 +27,7 @@ const makeCall = async (userPhoneNumber) => {
             twiml: twiml.toString(),
             to: "+91" + userPhoneNumber,
             from: '+15412554826',
-            statusCallback: 'https://5cf6-2401-4900-1c06-5f1d-e0c6-b489-f73a-6e22.ngrok-free.app/api/tasks/twilio/status', // Replace with your server endpoint
+            statusCallback: `${ngrokPublicUrl}/api/tasks/twilio/status`, // Replace with your server endpoint
             statusCallbackEvent: ['completed'],
             statusCallbackMethod: 'POST'
         });
